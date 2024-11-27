@@ -47,6 +47,11 @@ It can be overridden with commandline parameter, e.g.
 mvn clean package -Djitexecutor.log.level=DEBUG
 ```
 
+Once `jitexecutor-runner` appliction is running, you can use prepared scripts for easier evaluation of your models. see the `demo-scripts` folder.
+Usage of scripts could be for example:
+1.  Obtain a model information: `./fetchModelDetails.sh ../../apps-integration-tests/integration-tests-trusty-service/integration-tests-trusty-service-common/src/main/resources/TrafficViolation.dmn`
+2. Evaluate the model: `./evaluateModel.sh ../../apps-integration-tests/integration-tests-trusty-service/integration-tests-trusty-service-common/src/main/resources/TrafficViolation.dmn '{"Violation" : {"Type": "speed", "Speed Limit": 120, "Actual Speed": 150}, "Driver" : {"Points": 6}}'`
+
 DMN
 ===
 
